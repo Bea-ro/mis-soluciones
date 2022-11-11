@@ -1,27 +1,35 @@
-body {
-  background: #eee;
-  font-family: sans-serif;
+div {
+width: 150px;
+height: 40px;
+margin: 10px;
+padding: 10px;
+display: inline-block;
+background-color:#e74c3c
 }
 
-.card {
-  width: 400px;
-  background: #fff;
-  margin: 16px auto;
+p{
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+padding: 10px;
+display: inline-block;
+background-color:#9b59b6
 }
 
-.title {
-  background: #e3f4ff;
+span {
+  width: 150px;
+  height: 40px;
+  background-color:#3498db;
+  display: inline-block;
+  margin: 10px;
+padding: 10px;
 }
 
-.content {
-  background: #e3f4ff;
-}
-
-.button-container {
-  background: #e3f4ff;
-}
-
-button {
-  background: white;
-  border: 1px solid #eee;
+a{
+  width: 150px;
+  height: 40px;
+  background-color:#2ecc71;
+  display: inline-block;    
+  margin: 10px;
+padding: 10px;
 }
