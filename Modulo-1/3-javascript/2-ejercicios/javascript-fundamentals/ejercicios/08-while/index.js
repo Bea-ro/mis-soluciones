@@ -12,11 +12,11 @@ function main(customNumber = -1, customString = '') {
   // Otro ejemplo: si customNumber vale -2 => ex1 valdrá 0
   // Otro ejemplo: si customNumber vale 0 => ex1 valdrá X
   var i = customNumber;
-  while (i < 50) {
+  while (i >=0 && i <20) {
     ex1 += 2;
-
-    i += 1000;
+    i += 1;
   }
+
 
   // 2. Dado un customString que sea un string cualquiera, arregla el bucle while para que:
   // - Si el string tiene un número de vocales MAYOR a 3, se asigne a ex2 el valor de customString en mayúsculas
@@ -27,19 +27,26 @@ function main(customNumber = -1, customString = '') {
   // Otro ejemplo: si customString vale instrumento => ex2 debe valer INSTRUMENTO al haber más de 3 vocales
   let j = 0;
   let vowels = 0;
+  
+  
   while (j < customString.length) {
-    var letter = customString[i];
+    var letter = customString[j];
 
-    if (true) {
+    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
       vowels += 1;
     }
 
     j++;
   }
 
-  if (vowels > 10) {
+  if (vowels <= 3) {
     ex2 = customString;
   }
+
+  else {
+    ex2 = customString.toUpperCase();
+      }
+
 
   return {
     ex1,
