@@ -8,4 +8,4 @@ const users = [
   { name: "Bruce", years: 32 },
   { name: "Khamala", years: 16 },
 ];
-```
+

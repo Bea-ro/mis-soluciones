@@ -1,0 +1,17 @@
+const products = [
+  { name: "Funko Dr. Strange", sellCount: 10 },
+  { name: "Mochila de protones: Ghostbusters", sellCount: 302 },
+  { name: "Sable laser FX", sellCount: 23 },
+  { name: "Varita de Voldemort", sellCount: 6 },
+]
+
+let totalSellCount = 0
+let averageSell = 0
+  
+for (let i=0; i < products.length; i++) {
+  const product = products[i]
+totalSellCount += product.sellCount;
+averageSell = totalSellCount/products.length
+}
+console.log(totalSellCount)
+console.log(averageSell)

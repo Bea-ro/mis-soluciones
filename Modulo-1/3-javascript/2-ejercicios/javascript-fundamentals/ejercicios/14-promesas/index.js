@@ -1,8 +1,13 @@
 // 1. Asigna a la variable "promise" una promesa que se resuelva con el string "me he resuelto!"
-var promise;
+var promise = new Promise((resolve) => {
+  resolve('me he resuelto!');
+}
+);
 
 // 2. Asigna a la variable "promiseError" una promesa que se rechace con el string "me han rechazado!"
-var promiseError;
+var promiseError = new Promise((reject) => {
+    reject('me han rechazado!)');
+})
 
 // 3. Dada la función "resolvePasta", completa la función "getPasta" para que invoque a
 // la función "resolvePasta" con el argumento "pasta" y luego la resuelva (.then) invocando
@@ -10,9 +15,9 @@ var promiseError;
 const resolvePasta = (pasta) => new Promise((resolve) => resolve(pasta));
 
 const getPasta = (pasta) => {
-  // Completa el código ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
-  // Completa el código ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
-};
+  resolvePasta(pasta).then((response) => console.log(response));
+  }
+    
 
 // --EXTRA-- Dada la función "getAnimals", completa la promesa .then dentro de la función
 // addAnimals para que añada al final del array el animal "tiger". Luego resuelve dicha
@@ -21,17 +26,18 @@ const getPasta = (pasta) => {
 const getAnimals = () => new Promise((resolve) => resolve(["lion", "panda"]));
 
 const addAnimals = () => {
-  return getAnimals().then(
-    (animals) =>
+  return (getAnimals().then((animals) =>
       new Promise((resolve) => {
-        // Completa el código ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
-        // Completa el código ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
-      })
-  );
-  // Completa el código ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+        animals.push('tiger');
+        resolve(animals);
+        })
+  )
+  .then((response) =>
+      console.log(response))             
+           )
+  };
 
-  // Completa el código ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
-};
+  console.log(addAnimals())
 
 // --GOD MODE-- Dada la función "extraPromise", completa la variable con "promise" con
 // una promesa que resuelva "estoy resuelto" o se rechace con "he sido rechazado" dependiendo
@@ -39,12 +45,12 @@ const addAnimals = () => {
 // que invoque a console.log con su correspondiente respuesta
 const extraPromise = (isResolved) => {
   var promise = new Promise((resolve, reject) => {
-    // Completa el código ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
-    // Completa el código ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+    if (isResolved) resolve ('estoy resuelto');
+  else reject ('he sido rechazado');
   });
-  // Completa el código ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
-
-  // Completa el código ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+  return promise
+  .then((value) => console.log(value))
+  .catch((value) => console.log(value));
 };
 
 // ///////////////////////////////////////////////////////////////
