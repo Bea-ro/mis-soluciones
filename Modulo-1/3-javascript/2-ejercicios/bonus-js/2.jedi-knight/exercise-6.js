@@ -1,17 +1,19 @@
 
-const fantasticFour = [
+let fantasticFour = [
   "La antorcha humana",
   "Mr. Fantástico",
   "La mujer invisible",
   "La cosa",
 ];
 
-const swap = (fantasticFour, a,b) => {
-   
-    return fantasticFour
+let indice = 2
+let indice2 = 3
+
+const swap = () => {
+  const deleteValue = fantasticFour[indice]
+  fantasticFour[indice] = fantasticFour[indice2]
+  fantasticFour[indice2] = deleteValue
+  console.log(fantasticFour)
 }
 
-console.log(swap(fantasticFour,[1],[3]))
-
-// const MrFantastic = fantasticFour.indexOf('Mr. Fantástico')
-// console.log(MrFantastic)
+swap()
