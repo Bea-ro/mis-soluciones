@@ -40,5 +40,5 @@ for (let user of users) {
    const average = (0 + favoriteSound.volume) / user.favoritesSounds.lenght
   }   
   return average
-}
 
+  const pruebaCambios
