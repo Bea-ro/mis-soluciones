@@ -35,7 +35,9 @@ const movies = [
 let newCategoryList = []
 
 for (let movie of movies) {
+  console.log(movie)
   for (let category of movie.categories) {
+    console.log(category)
 if (newCategoryList.includes(category)) {
 newCategoryList
 }

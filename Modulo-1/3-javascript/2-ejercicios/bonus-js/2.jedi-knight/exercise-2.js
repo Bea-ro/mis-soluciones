@@ -1,5 +1,3 @@
-// media del volumen de todos los sonidos favoritos
-
 const users = [
   {
     name: "Alberto",
@@ -35,10 +33,45 @@ const users = [
   },
 ];
 
-for (let user of users) {
-  for (let favoriteSound of user.favoritesSounds) {
-   const average = (0 + favoriteSound.volume) / user.favoritesSounds.lenght
-  }   
-  return average
 
-  const pruebaCambios
+
+let newArray = []
+
+const getAverageVolume = () => {
+        let totalVolume = 0
+        let averageVolume = 0
+    
+      for (let user of users) {
+        console.log(user)
+        const sounds = user.favoritesSounds
+        console.log(sounds)
+        const soundProps = Object.values(sounds)
+        console.log(soundProps)
+        for (let soundProp of soundProps) {
+          console.log(soundProp)
+          const volumes = soundProp.volume
+         console.log(volumes)
+         newArray.push(volumes)
+        totalVolume += volumes
+                                
+        }      
+        }
+        console.log(newArray)
+        return totalVolume/newArray.length
+ 
+      }
+      
+
+console.log(getAverageVolume())
+
+//Ejemplo for in para sacar nombres:
+for (let user of users) {
+    for (let sound in user.favoritesSounds) {
+console.log(sound)}}
+
+
+
+
+
+
+
