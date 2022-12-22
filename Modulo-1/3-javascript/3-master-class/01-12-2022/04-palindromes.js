@@ -6,8 +6,10 @@
 const isPalindrome = (word) => {
   // Primero separo el string de la palabra y lo convierto en un array de letras
   const splitWord = word.split('');
+  console.log(word.split())
   // Le doy la vuelta al array de letras
   const reverseLetters = splitWord.reverse();
+  console.log(splitWord.reverse())
   // Uno el array de letras en un string con todo pegado
   const reverseWord = reverseLetters.join('');
 
