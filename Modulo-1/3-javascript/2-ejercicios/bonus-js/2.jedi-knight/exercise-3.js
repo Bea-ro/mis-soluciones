@@ -1,10 +1,4 @@
-// forof y forin cuantas veces ha sido cada sonido agregado por los usuarios a favorito. 
-
-// Para ello recorre la lista de usuarios y usa forin para recoger el nombre de los sonidos 
-// que el usuario tenga como favoritos.
-
-// Una vez accedas a ellos piensa en la mejor forma de hacer un conteo de cada vez que ese sonido 
-// se repita como favorito en cada usuario.
+// cuantas veces cada sonido 
 
 const users = [
   {
@@ -40,4 +34,22 @@ const users = [
     },
   },
 ];
-```
+
+let soundsList = []
+
+for (let user of users) {
+for (let sound in user.favoritesSounds) {
+soundsList.push(sound)
+}}
+
+console.log(soundsList)
+
+
+const soundsCount = {}
+
+soundsList.forEach((sound) => {
+soundsCount[sound] = soundsCount[sound] + 1 || 1
+})
+
+
+console.log(soundsCount)
