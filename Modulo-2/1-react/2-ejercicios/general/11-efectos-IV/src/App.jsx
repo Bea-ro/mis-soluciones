@@ -7,38 +7,36 @@ import genres from './components/Genres'
 function App() {
  
   const [moviesList, setMoviesList] = useState(movies)
-  const [genresList, setGenresList] = useState(genres)
+  const [genre, setGenre] = useState('All')
 
-  useEffect(() => {
-  const filteredMoviesList = () => {
-    moviesList.filter((movie) => {
-    return movie.genre === genresList  
-    })
-  }
-  setMoviesList(filteredMoviesList())
-  }, [genresList])
+useEffect(() => {
+if (genre === 'All') {movies.title} else {
+let filteredMoviesList =
+movies.filter((movie) => movie.genre === genre) 
+setMoviesList(filteredMoviesList)}
+}, [genre])
   
 
   return (
     <div className="App">
     
     <div>
-     {moviesList.map((movie) => (
-      <ul>
-        <li key={movie.id}>{movie.title}</li>
+    <ul>
+    {moviesList.map((movie) => (
+    <li key={movie.id}>{movie.title}
+    </li>
+    )
+    )}
       </ul>
-      )
-     )}
      </div>
 
      <div>
      <select name="genre" id="genre"  
-     onSelect={(e) => {setGenresList(e.target.value)}}
+     onChange={(e) => {setGenre(e.target.value)}}
      > 
-     {genresList.map((genre) => (
+     {genres.map((genre) => (
      <option value={genre.name} key={genre.id}>{genre.name}
      </option>
-     
      )
      )}   
      </select>
