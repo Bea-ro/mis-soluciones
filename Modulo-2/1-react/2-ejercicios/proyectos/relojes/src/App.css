@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'DS-Digital'; 
+  src:url('./assets/DS-DIGII.TTF');
+  font-wight: normal;
+  font-style: normal;
+  }
+
+    #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: black;
+}
+
+p {
+  background-color: rgba(228, 221, 221, 0.178);
+  padding: 12px;
+  border-radius: 1em;
+  font-family: 'DS-Digital';
+  font-size: 48px;
+  color: red;
+}
+
+
+
+
+  

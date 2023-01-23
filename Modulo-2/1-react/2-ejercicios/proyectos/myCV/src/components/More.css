@@ -1,0 +1,23 @@
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.card {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: rgba(240, 248, 255, 0.241);
+  }
+  .language-name {
+    font-weight: 500;
+  }
+  .skills, .language {
+    display:flex;
+    flex-direction: column;
+  }

@@ -1,0 +1,23 @@
+#root {
+  min-width: 500px;
+  max-width: 2280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  background: linear-gradient(180deg, rgba(210, 211, 211, 0.957), rgb(117, 144, 173) 75%);
+}
+
+.buttons {
+  display:flex;
+  gap: 12px;
+  justify-content: center;
+  padding-top: 12px;
+}
+
+button {
+background-color: rgba(240, 248, 255, 0.241);
+
+}
