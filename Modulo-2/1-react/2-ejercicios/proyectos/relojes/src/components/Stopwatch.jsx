@@ -8,23 +8,32 @@ const Stopwatch = () => {
   const [minutesState, setMinutesState] = useState(0)
   const [secondsState, setSecondsState] = useState(0)
   const [intervalID, setIntervalID] = useState(null)
+  const [secondsCounter, setSecondsCounter] = useState(0)
 
   
 const init = () => {
+
 setIntervalID(
 setInterval(() => {
-    if (secondsState>=0 && secondsState <=58) {
-      setSecondsState((prevSecondsState)=> prevSecondsState + 1)
-    } else if (secondsState>=60 && secondsState <=3600) {
-      setSecondsState(59);
-      setMinutesState(((prevMinutesState) => prevMinutesState + 1))
-    } else if (secondsState>3600) {
-      setSecondsState(59);
-      setMinutesState(59);
-      setHoursState(((prevHoursState)=> prevHoursState + 1))
-    }}, 1000))
-  }
+  
+setSecondsCounter((prevSecondsCounter)=> prevSecondsCounter + 1);
 
+if (secondsCounter>=0 && secondsCounter <=58) {
+setSecondsState((prevSecondsCounter)=> prevSecondsCounter + 1)
+} else if (secondsCounter>=59 && secondsCounter <=3598) {
+setSecondsState(59);
+setMinutesState(Math.floor(secondsCounter/60))
+} else if (secondsCounter>=3599) {
+setSecondsState(59);
+setMinutesState(59);     
+setHoursState(Math.floor(secondsCounter/3600))}
+}, 1000))
+
+}
+
+
+
+  
   const pause = () => {clearInterval(intervalID); setIntervalID(null)}
 
   const reinit = () => {clearInterval(intervalID); setIntervalID(null);init()}
@@ -32,7 +41,8 @@ setInterval(() => {
 
 return (
   <div className="digital-clock">
-      <h2>{hoursState}:{minutesState}:{secondsState}</h2>
+    <p>{secondsCounter}</p>
+          <h2>{hoursState}:{minutesState}:{secondsState}</h2>
       
       <div className="buttons">
 
@@ -40,6 +50,7 @@ return (
       <button type="button" onClick={pause}>Pausar</button>
       <button type="button" onClick={init}>Reanudar</button>  
       <button type="button" onClick={()=> {
+      setSecondsCounter(0);
       setSecondsState(0);
       setMinutesState(0);
       setHoursState(0);

@@ -5,15 +5,16 @@ En este proyecto vamos a crear una aplicación web con `Vite` y `React` consumie
 
 Lo primero que tendremos que hacer antes de empezar es generar la `API Key` en el formulario de bienvenida, ya que gracias a esta podremos realizar las peticiones: 
 
-[NASA Open APIs](https://api.nasa.gov/)
+[NASA Open APIs](https://api.nasa.gov/) 
+https://api.nasa.gov/planetary/apod?api_key=yjawi9EPzPsmknl45Ng3yoWI8wpLpPNzKSa03kyG
 
-<div align="center"><img src="../../../../README/nasa-1.png"/></div>
+<div align="center"><img src="../../../../../README/nasa-1.png"/></div>
 
 Una vez tengamos a buen recaudo nuestra API Key podremos navegar hasta la sección de `APOD (Astronomic Picture of the Day)`, inspeccionando tanto para lo que sirve como los endpoints y las queries que nos permite realizar:
 
-<div align="center"><img src="../../../../README/nasa-2.png"/></div>
+<div align="center"><img src="../../../../../README/nasa-2.png"/></div>
 
-<div align="center"><img src="../../../../README/nasa-3.png"/></div>
+<div align="center"><img src="../../../../../README/nasa-3.png"/></div>
 
 Como podemos observar, a la hora de realizar la petición tendremos que meterle dentro de la `query` nuestra `api_key` y podremos hacer uso de un parámetro llamado `date`. Esto nos será de mucha utilidad más adelante para poder recuperar fotografías de días anteriores que el actual, ya que el endpoint en sí nos devuelve la foto del día en el que se realice la petición.
 
@@ -123,4 +124,4 @@ Como extra, en este caso estamos utilizando una librería de estilos basada en A
 
 Y de esta manera rápida y sencilla tendremos una aplicación web donde consultar la fotografía astronómica del día, o del día que escojamos:
 
-<div align="center"><img src="../../../../README/nasa-4.png"/></div>
+<div align="center"><img src="../../../../../README/nasa-4.png"/></div>
