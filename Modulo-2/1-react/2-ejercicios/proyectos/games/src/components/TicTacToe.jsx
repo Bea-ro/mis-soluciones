@@ -49,7 +49,7 @@ setPlayerX(true)
         <button type="button" className="start-button" onClick={()=>{
             isStarted ? setIsStarted(false) : setIsStarted(true)}
             }>Start</button> 
-        <p>Es el turno del jugador {playerX? "X" : "Y"}</p>
+        <p>Es el turno del jugador: {playerX? "X" : "Y"}</p>
         </div>
        
         <div className="gameboard" id="gameboard">
