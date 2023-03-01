@@ -5,13 +5,13 @@ const getNotes = () => {
 fetch("http://localhost:3000/diary")
 .then((res) => res.json())
 .then((response) => {
-    console.log('fetch:', response)
-printNotes(response);
+    console.log('fetch:', response);
+    const orderedNotes = response.sort((a,b) => 
+    a.date.replaceAll('-','' ) - b.date.replaceAll('-','' ));  
+printNotes(orderedNotes);
 })
 }
 
-//menor a mayor .date
-// // .sort((a,b) => a.date.getTime() - b.date.getTime())
 
 const printNotes = (notes) => {
 notes.map((note) => {
