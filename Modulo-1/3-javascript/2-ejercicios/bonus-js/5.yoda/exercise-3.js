@@ -32,6 +32,7 @@ const getOrderTemplate = (order, products) =>
       .then((products) => { console.log(products);
   
 orders.forEach((order) => {
+    //los fetch no se cierran hasta después del forEach-order
 body.innerHTML += getOrderTemplate(order, products);
 })
 })
