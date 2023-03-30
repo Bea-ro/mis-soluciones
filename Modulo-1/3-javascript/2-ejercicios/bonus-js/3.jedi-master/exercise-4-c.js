@@ -59,7 +59,7 @@ const buttons = document.querySelectorAll('.removal');
   
 for (let i = 0; i < buttons.length; i++) {
 let buttonElement = buttons[i];
-buttonElement.addEventListener('click', removeDivs);
+buttonElement.addEventListener('click', handleDelete);
 }}
 
 getTitlesAndImages()

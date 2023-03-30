@@ -1,10 +1,5 @@
-let obj = {
-    name: 'John',
-    age: 30
-  };
-  
+function solution(str){
+ return str.split().reverse().join('')
+}
 
-  let showPerson = function (datos) {
-    console.log(`${datos} Name: ${this.name}, Age: ${this.age}`);
-  }.call(obj, 'Datos: ');
-  
+console.log(solution('Irene'))

@@ -99,7 +99,8 @@ footer.appendChild(h2);
 document.body.appendChild(footer);
 
 //---------------------------------------------------//
-//Vamos a añadirle al boton del tema una funcionalidad para que nos añada y nos quite una clase del body
+//Vamos a añadirle al boton del tema una funcionalidad para que 
+//nos añada y nos quite una clase del body
 const themeBtn = document.querySelector("#themeBtn");
 themeBtn.addEventListener("click", (ev) => {
   // ev.target.previousElementSibling.innerText = "Hola";
